@@ -356,7 +356,7 @@
 
         if (!input) return alert("Enter some ingredients!");
 
-        const url = https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodeURIComponent(input)}&number=6&apiKey=${API_KEY};
+        const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodeURIComponent(input)}&number=6&apiKey=${API_KEY}`;
 
         try {
           const res = await fetch(url);
@@ -380,11 +380,11 @@
           document.querySelectorAll(".viewBtn").forEach(btn => {
             btn.addEventListener("click", async (e) => {
               const id = e.target.getAttribute("data-id");
-              const detailsRes = await fetch(https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY});
+              const detailsRes = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
               const details = await detailsRes.json();
 
               let ingredientsList = details.extendedIngredients
-                  .map(i => <li>${i.original}</li>)
+                  .map(i => `<li>${i.original}</li>`)
                   .join("");
 
               modalBody.innerHTML = `
