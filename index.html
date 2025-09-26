@@ -4,10 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interactive Recipe Finder</title>
-  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <script src="script.js"></script>
   <header>
     <div class="brand">
       <div class="logo">IR</div>
@@ -16,38 +15,32 @@
         <div class="tag">Turn what’s in your kitchen into tonight’s meal</div>
       </div>
     </div>
-
     <div>
       <a class="btn" href="#about">About</a>
       <a class="btn secondary" href="#demo">Demo Walkthrough</a>
     </div>
   </header>
-
-  <!-- Home Section -->
   <main id="home">
     <section class="card">
       <h2>Find recipes from what you have</h2>
-      <p class="small">Type ingredients separated by commas — e.g., <em>chicken, rice, garlic</em></p>
-
+      <p class="small">
+        Type ingredients separated by commas — e.g., <em>chicken, rice, garlic</em>
+      </p>
       <div class="input-row">
         <input id="ingredientsInput" type="text" placeholder="e.g., eggs, tomato, basil">
         <button class="btn" id="searchBtn">Find Recipes</button>
       </div>
     </section>
   </main>
-
-  <!-- Search Results -->
   <section id="searchResults" style="display:none">
     <h2>Search Results</h2>
     <div id="recipesGrid" class="grid"></div>
   </section>
-
-  <!-- About Section -->
   <section id="about">
     <h2>About Interactive Recipe Finder</h2>
     <p>
-      Interactive Recipe Finder is a smart pantry-based recipe recommendation tool.
-      You just type in the ingredients available at your home, and our system finds
+      Interactive Recipe Finder is a smart pantry-based recipe recommendation tool. 
+      You just type in the ingredients available at your home, and our system finds 
       matching recipes using the Spoonacular API.
     </p>
     <ul>
@@ -58,8 +51,6 @@
       <li>Rate recipes ⭐ after exploring.</li>
     </ul>
   </section>
-
-  <!-- Demo Section -->
   <section id="demo">
     <h2>Demo Walkthrough</h2>
     <ol>
@@ -71,16 +62,12 @@
       <li>After closing, rate your recipe with stars ⭐.</li>
     </ol>
   </section>
-
-  <!-- Recipe Modal -->
   <div id="recipeModal" class="modal">
     <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
+      <span id="closeModal" class="close">×</span>
       <div id="modalBody"></div>
     </div>
   </div>
-
-  <!-- Feedback Popup -->
   <div id="feedbackPopup" class="feedback">
     <h3>⭐ Rate your experience</h3>
     <div class="stars">
@@ -91,9 +78,9 @@
       <span data-star="5">★</span>
     </div>
   </div>
-
   <footer>
     © Interactive Recipe Finder — built for curious cooks everywhere.
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
